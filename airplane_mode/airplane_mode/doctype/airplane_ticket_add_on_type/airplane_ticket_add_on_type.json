@@ -1,50 +1,30 @@
 {
  "actions": [],
- "allow_guest_to_view": 1,
  "allow_rename": 1,
- "autoname": "name1.-.###.",
- "creation": "2023-06-16 13:06:42.569963",
- "default_view": "List",
+ "autoname": "prompt",
+ "creation": "2023-06-19 11:20:20.568119",
+ "description": "Description about the add-on",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "model",
-  "name1",
-  "capacity"
+  "description"
  ],
  "fields": [
   {
-   "fieldname": "model",
+   "fieldname": "description",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Model",
-   "reqd": 1
-  },
-  {
-   "fieldname": "name1",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Airline",
-   "options": "Airline",
-   "reqd": 1
-  },
-  {
-   "fieldname": "capacity",
-   "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Capacity",
-   "non_negative": 1,
-   "reqd": 1
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-01 00:18:40.886489",
+ "modified": "2023-07-01 00:24:43.263951",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
- "name": "Airplane",
- "naming_rule": "By \"Naming Series\" field",
+ "name": "Airplane Ticket Add-on Type",
+ "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
   {
@@ -67,7 +47,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Fleet Manager",
+   "role": "Airport Authority Personnel",
    "share": 1,
    "write": 1
   },
@@ -79,7 +59,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Airport Authority Personnel",
+   "role": "Fleet Manager",
    "share": 1,
    "write": 1
   },
@@ -93,13 +73,15 @@
    "share": 1
   },
   {
+   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "Flight Crew Member",
-   "share": 1
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",
