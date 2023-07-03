@@ -17,8 +17,12 @@
   "departure_date",
   "departure_time",
   "duration_of_flight",
-  "amended_from",
-  "status"
+  "status",
+  "add_ons",
+  "seat",
+  "flight_price",
+  "total_amount",
+  "amended_from"
  ],
  "fields": [
   {
@@ -98,14 +102,37 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Booked\nChecked-In\nBoarded.",
+   "options": "Booked\nChecked-In\nBoarded",
    "reqd": 1
+  },
+  {
+   "fieldname": "add_ons",
+   "fieldtype": "Table",
+   "label": "Add Ons",
+   "options": "Airplane Ticket Add-on Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "seat",
+   "fieldtype": "Read Only",
+   "label": "Seat"
+  },
+  {
+   "fieldname": "flight_price",
+   "fieldtype": "Currency",
+   "label": "Flight Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-17 00:11:57.795862",
+ "modified": "2023-07-01 00:22:55.109502",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",
@@ -121,6 +148,41 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Airport Authority Personnel",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Travel Agent",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Flight Crew Member",
    "share": 1,
    "write": 1
   }

@@ -1,0 +1,18 @@
+{% extends 'templates/web.html' %}
+{% block page_content %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+<h1>{{ airplane }}-{{ date_of_departure }}</h1>
+
+<div class="card" style="width: 30rem;">
+    <div class="card-body">
+      <h5 class="card-title">Flight Details</h5>
+      <p class="card-text">Airline : {{ airplane }}</p>
+      <h5 class="card-text">{{ source_airport_code }} <span style='font-size:50px;'>&#8594;</span> {{ destination_airport_code }}</h5>
+      <p class="card-text">{{ date_of_departure }} | {{ time_of_departure }}</p>
+      <p class="card-text">Duration : {{ duration }}</p>
+      <a href="/book-flight-ticket/new?flight={{ airplane }}" class="btn btn-primary">Book Flight</a>
+    </div>
+  </div>
+
+{% endblock %} 
+  

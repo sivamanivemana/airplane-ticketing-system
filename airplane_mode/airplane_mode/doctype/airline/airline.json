@@ -1,8 +1,9 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "prompt",
- "creation": "2023-06-16 12:21:18.554741",
+ "creation": "2023-06-29 22:49:29.615139",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -10,14 +11,14 @@
  "field_order": [
   "founding_year",
   "customer_care_number",
-  "head_quarters"
+  "head_quarters",
+  "website"
  ],
  "fields": [
   {
    "fieldname": "founding_year",
    "fieldtype": "Int",
-   "label": "Founding Year",
-   "non_negative": 1
+   "label": "Founding Year"
   },
   {
    "fieldname": "customer_care_number",
@@ -30,7 +31,15 @@
    "fieldname": "head_quarters",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Head_Quarters",
+   "label": "Head Quarters",
+   "reqd": 1
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Website",
+   "options": "URL",
    "reqd": 1
   }
  ],
@@ -41,7 +50,7 @@
    "link_fieldname": "name1"
   }
  ],
- "modified": "2023-06-17 00:00:59.109727",
+ "modified": "2023-07-01 00:16:55.181526",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airline",
@@ -59,9 +68,49 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fleet Manager",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Airport Authority Personnel",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Flight Crew Member",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Travel Agent",
+   "share": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
